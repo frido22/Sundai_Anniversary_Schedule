@@ -1,15 +1,15 @@
-import Image from "next/image";
+'use client';
+
 import ScheduleSection from './components/ScheduleSection';
 import PepeFrog from './components/PepeFrog';
-import { useEffect } from 'react';
 
 function Fireworks() {
   return (
     <>
-      <div className="firework" style={{"--x": "20px"} as any} />
-      <div className="firework" style={{"--x": "-20px"} as any} />
-      <div className="firework" style={{"--x": "40px"} as any} />
-      <div className="firework" style={{"--x": "-40px"} as any} />
+      <div className="firework left-[20%]" />
+      <div className="firework left-[40%]" />
+      <div className="firework left-[60%]" />
+      <div className="firework left-[80%]" />
     </>
   );
 }
@@ -62,20 +62,18 @@ export default function Home() {
       
       <div className="text-center mb-12">
         <pre className="text-green-400 opacity-70 mb-4 hidden md:block">
-{`
- _____                 _         _ 
+{` _____                 _         _ 
 /  ___|               | |       (_)
 \\ \`--.  _   _  _ __   | |  __ _ _ 
  \`--. \\| | | || '_ \\  | | / _\` || |
 /\\__/ /| |_| || | | | | || (_| || |
-\\____/  \\__,_||_| |_| |_| \\__,_||_|
-`}
+\\____/  \\__,_||_| |_| |_| \\__,_||_|`}
         </pre>
         <h1 className="text-4xl md:text-6xl font-bold mb-2 glitch-text" data-text="Anniversary Schedule">
           Anniversary Schedule
         </h1>
         <p className="text-green-400/70 font-mono">
-          <span className="opacity-50">$</span> ./run_event.sh --date="Sunday" --mode="awesome"
+          <span className="opacity-50">$</span> ./run_event.sh --date=&quot;Sunday&quot; --mode=&quot;awesome&quot;
         </p>
       </div>
       
@@ -86,10 +84,10 @@ export default function Home() {
           
           <div>
             <h2 className="text-2xl font-bold mb-4 text-green-400 glitch-text" data-text="Part 2: Learn">
-              > Part 2: Learn
+              {'>'} Part 2: Learn
             </h2>
             <h3 className="text-xl mb-4 text-green-400">
-              <span className="opacity-50">function</span> workshops<span className="opacity-50">(</span>time: "12:00 - 2:00 PM"<span className="opacity-50">)</span>
+              <span className="opacity-50">function</span> workshops<span className="opacity-50">(</span>time: &quot;12:00 - 2:00 PM&quot;<span className="opacity-50">)</span>
             </h3>
             <ScheduleSection title="12:00 PM Workshops" events={workshopSchedule1} />
             <ScheduleSection title="1:00 PM Workshops" events={workshopSchedule2} />
@@ -98,7 +96,7 @@ export default function Home() {
 
           <div>
             <h2 className="text-2xl font-bold mb-4 text-green-400 glitch-text" data-text="Part 3: Experience">
-              > Part 3: Experience
+              {'>'} Part 3: Experience
             </h2>
             <ScheduleSection title="Demo Session 1" events={demoSession1} />
             <ScheduleSection title="Demo Session 2" events={demoSession2} />

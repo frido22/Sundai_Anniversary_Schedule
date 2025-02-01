@@ -6,6 +6,7 @@
   --foreground-rgb: 0, 255, 0;
   --background-start-rgb: 0, 0, 0;
   --background-end-rgb: 0, 10, 0;
+  --firework-x: 0px;
 }
 
 body {
@@ -96,27 +97,9 @@ body {
   100% { transform: none; }
 }
 
-.matrix-bg {
-  position: relative;
-}
-
-.matrix-bg::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(rgba(0, 255, 0, 0.03) 50%, rgba(0, 0, 0, 0.1) 50%);
-  background-size: 100% 4px;
-  pointer-events: none;
-  z-index: 1;
-}
-
 .firework {
   position: fixed;
   top: 50%;
-  left: 50%;
   width: 8px;
   height: 8px;
   background: #0f0;
@@ -151,21 +134,21 @@ body {
   transform: translateX(150%);
 }
 
-.firework:nth-child(1) { animation-delay: 0s; left: 20%; }
-.firework:nth-child(2) { animation-delay: 0.6s; left: 40%; }
-.firework:nth-child(3) { animation-delay: 1.2s; left: 60%; }
-.firework:nth-child(4) { animation-delay: 1.8s; left: 80%; }
+.firework:nth-child(1) { animation-delay: 0s; }
+.firework:nth-child(2) { animation-delay: 0.6s; }
+.firework:nth-child(3) { animation-delay: 1.2s; }
+.firework:nth-child(4) { animation-delay: 1.8s; }
 
 @keyframes firework {
   0% {
-    transform: scale(0) translate(0, 0);
+    transform: scale(0) translateY(0);
     opacity: 1;
   }
   40% {
     opacity: 1;
   }
   100% {
-    transform: scale(2) translate(var(--x), -100vh);
+    transform: scale(2) translateY(-100vh);
     opacity: 0;
   }
 }
@@ -173,7 +156,24 @@ body {
 @keyframes fireworkParticle {
   0% { transform: translateX(0); opacity: 1; }
   50% { opacity: 0.5; }
-  100% { transform: translateX(var(--x)); opacity: 0; }
+  100% { transform: translateX(100px); opacity: 0; }
+}
+
+.matrix-bg {
+  position: relative;
+}
+
+.matrix-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 255, 0, 0.03) 50%, rgba(0, 0, 0, 0.1) 50%);
+  background-size: 100% 4px;
+  pointer-events: none;
+  z-index: 1;
 }
 
 .sparkle {

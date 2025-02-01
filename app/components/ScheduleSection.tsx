@@ -13,7 +13,7 @@ export default function ScheduleSection({ title, events }: ScheduleSectionProps)
   return (
     <div className="mb-8 relative">
       <h2 className="text-2xl font-bold mb-4 text-green-400 glitch-text" data-text={title}>
-        > {title}
+        {'>'} {title}
       </h2>
       <div className="space-y-2">
         {events.map((event, index) => (
