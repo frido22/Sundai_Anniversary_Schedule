@@ -37,7 +37,7 @@ export default function Home() {
   ];
 
   const demoSession1 = [
-    { time: "6:00 PM - 6:45 PM", title: "Everydai Projects: Charm, CodePromptFu, SocialCal, OpenbookLM" },
+    { time: "6:00 PM - 6:45 PM", title: "Everydai Projects: Charm, CodePromptFu, SocialCal, Headstart, OpenbookLM" },
     { time: "6:00 PM - 6:45 PM", title: "Sundai Projects: Cairo, Silicon Tools, QuizMe, ScriptCut, Groovify, Grim Repor" },
     { time: "6:00 PM - 6:45 PM", title: "MIT Projects: IAP Rapid Prototyping Projects" },
   ];
@@ -45,7 +45,7 @@ export default function Home() {
   const demoSession2 = [
     { time: "7:00 PM - 7:45 PM", title: "Sundai Projects: Kill The Robot, Home Wrecker, AI Pet Photo, Sundai Travel" },
     { time: "7:00 PM - 7:45 PM", title: "Sundai Projects: Automated Data Scientist, Personal AI Shopper, InstaGift" },
-    { time: "7:00 PM - 7:45 PM", title: "Sundai Projects: Termsminator, Book Digest, Sendbet, Keysplitter, Journey Board, Sundai Filters" },
+    { time: "7:00 PM - 7:45 PM", title: "Sundai Projects: Termsminator, Book Digest, Sendbet, Keysplitter, Sundai Filters" },
   ];
 
   const closingEvents = [
