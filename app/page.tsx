@@ -1,7 +1,6 @@
 'use client';
 
 import ScheduleSection from './components/ScheduleSection';
-import PepeFrog from './components/PepeFrog';
 
 function Fireworks() {
   return (
@@ -58,7 +57,6 @@ export default function Home() {
   return (
     <main className="min-h-screen p-8 md:p-12 max-w-5xl mx-auto matrix-bg">
       <Fireworks />
-      <PepeFrog />
       
       <div className="text-center mb-12">
         <pre className="text-green-400 opacity-70 mb-4 hidden md:block">
