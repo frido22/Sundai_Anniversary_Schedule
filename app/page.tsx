@@ -1,101 +1,111 @@
 import Image from "next/image";
+import ScheduleSection from './components/ScheduleSection';
+import PepeFrog from './components/PepeFrog';
+import { useEffect } from 'react';
+
+function Fireworks() {
+  return (
+    <>
+      <div className="firework" style={{"--x": "20px"} as any} />
+      <div className="firework" style={{"--x": "-20px"} as any} />
+      <div className="firework" style={{"--x": "40px"} as any} />
+      <div className="firework" style={{"--x": "-40px"} as any} />
+    </>
+  );
+}
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const hackSchedule = [
+    { time: "10:00 AM", title: "Hack starts" },
+    { time: "11:00 AM", title: "Special guest lecture by Chi Wang, founder of AutoGen framework" },
+  ];
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  const workshopSchedule1 = [
+    { time: "12:00 PM", title: "AI Powered Portfolio Building with Konstantina Yaneva", location: "Room BlueScreen" },
+    { time: "12:00 PM", title: "Foundational LLMs from Scratch with Igor Saldalski", location: "Room Localhost" },
+    { time: "12:00 PM", title: "Building even faster with Codapt with Trevor Keith", location: "Room TypeError" },
+  ];
+
+  const workshopSchedule2 = [
+    { time: "1:00 PM", title: "Building Next.js App with LLMs Assistants with Artem Lukoianov", location: "Room BlueScreen" },
+    { time: "1:00 PM", title: "Agents with Abby Damodaran and Nikolay Vyahhi", location: "Room Localhost" },
+    { time: "1:00 PM", title: "AI Partners: Beyond Tools to Teammates with Ilya Gulko", location: "Room TypeError" },
+  ];
+
+  const afternoonSchedule = [
+    { time: "2:00 PM - 4:00 PM", title: "Talks on AI Ethics, Frameworks, and Human Flourishing" },
+    { time: "5:00 PM - 6:00 PM", title: "Startup Pitches" },
+  ];
+
+  const demoSession1 = [
+    { time: "6:00 PM - 6:45 PM", title: "Everydai Projects: Charm, CodePromptFu, SocialCal, OpenbookLM" },
+    { time: "6:00 PM - 6:45 PM", title: "Sundai Projects: Cairo, Silicon Tools, QuizMe, ScriptCut, Groovify, Grim Repor" },
+    { time: "6:00 PM - 6:45 PM", title: "MIT Projects: IAP Rapid Prototyping Projects" },
+  ];
+
+  const demoSession2 = [
+    { time: "7:00 PM - 7:45 PM", title: "Sundai Projects: Kill The Robot, Home Wrecker, AI Pet Photo, Sundai Travel" },
+    { time: "7:00 PM - 7:45 PM", title: "Sundai Projects: Automated Data Scientist, Personal AI Shopper, InstaGift" },
+    { time: "7:00 PM - 7:45 PM", title: "Sundai Projects: Termsminator, Book Digest, Sendbet, Keysplitter, Journey Board, Sundai Filters" },
+  ];
+
+  const closingEvents = [
+    { time: "7:45 PM - 8:00 PM", title: "Sponsor presentations from Foley Hoag and Æthos" },
+    { time: "8:00 PM - 8:30 PM", title: "Sundai Achievements and Plans" },
+    { time: "8:30 PM - 9:00 PM", title: "Hack Pitch" },
+  ];
+
+  return (
+    <main className="min-h-screen p-8 md:p-12 max-w-5xl mx-auto matrix-bg">
+      <Fireworks />
+      <PepeFrog />
+      
+      <div className="text-center mb-12">
+        <pre className="text-green-400 opacity-70 mb-4 hidden md:block">
+{`
+ _____                 _         _ 
+/  ___|               | |       (_)
+\\ \`--.  _   _  _ __   | |  __ _ _ 
+ \`--. \\| | | || '_ \\  | | / _\` || |
+/\\__/ /| |_| || | | | | || (_| || |
+\\____/  \\__,_||_| |_| |_| \\__,_||_|
+`}
+        </pre>
+        <h1 className="text-4xl md:text-6xl font-bold mb-2 glitch-text" data-text="Anniversary Schedule">
+          Anniversary Schedule
+        </h1>
+        <p className="text-green-400/70 font-mono">
+          <span className="opacity-50">$</span> ./run_event.sh --date="Sunday" --mode="awesome"
+        </p>
+      </div>
+      
+      <div className="space-y-12">
+        <div className="relative">
+          <div className="absolute -left-4 top-0 bottom-0 border-l-2 border-green-400/20"></div>
+          <ScheduleSection title="Part 1: Hack" events={hackSchedule} />
+          
+          <div>
+            <h2 className="text-2xl font-bold mb-4 text-green-400 glitch-text" data-text="Part 2: Learn">
+              > Part 2: Learn
+            </h2>
+            <h3 className="text-xl mb-4 text-green-400">
+              <span className="opacity-50">function</span> workshops<span className="opacity-50">(</span>time: "12:00 - 2:00 PM"<span className="opacity-50">)</span>
+            </h3>
+            <ScheduleSection title="12:00 PM Workshops" events={workshopSchedule1} />
+            <ScheduleSection title="1:00 PM Workshops" events={workshopSchedule2} />
+            <ScheduleSection title="Afternoon Events" events={afternoonSchedule} />
+          </div>
+
+          <div>
+            <h2 className="text-2xl font-bold mb-4 text-green-400 glitch-text" data-text="Part 3: Experience">
+              > Part 3: Experience
+            </h2>
+            <ScheduleSection title="Demo Session 1" events={demoSession1} />
+            <ScheduleSection title="Demo Session 2" events={demoSession2} />
+            <ScheduleSection title="Closing Events" events={closingEvents} />
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </div>
+    </main>
   );
 }
