@@ -38,7 +38,7 @@ export default function Home() {
     { time: "2:30 PM - 3:00 PM", title: "Predicting an Unpredictable World: For Those Who Depend on the Outcome with Rickard Gabrielson",  zoomLink: "https://mit.zoom.us/my/arteml" },
     { time: "3:00 PM - 3:45 PM", title: "Common Pitfalls and Best Legal Practices When Building an AI Startup with Foley Hoag",  zoomLink: "https://mit.zoom.us/my/arteml" },
     { time: "3:45 PM - 4:00 PM", title: "Informal AI Resources for People Who Want to Start Companies with Leandra Tejedor",  zoomLink: "https://mit.zoom.us/my/arteml" },
-    { time: "5:00 PM - 6:00 PM", title: "Startup Pitches",  zoomLink: "https://mit.zoom.us/my/arteml" },
+    { time: "5:00 PM - 5:30 PM", title: "Startup Pitches",  zoomLink: "https://mit.zoom.us/my/arteml" },
   ];
 
   const demoSession1 = [
