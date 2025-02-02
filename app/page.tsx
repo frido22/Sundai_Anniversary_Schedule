@@ -16,7 +16,7 @@ function Fireworks() {
 export default function Home() {
   const hackSchedule = [
     { time: "10:00 AM", title: "Hack starts" },
-    { time: "11:00 AM", title: "Special guest lecture by Chi Wang, founder of AutoGen framework",  zoomLink: "https://mit.zoom.us/my/arteml" },
+    { time: "11:00 AM", title: "Special guest lecture by Chi Wang, founder of AutoGen framework (Remote talk)",  zoomLink: "https://mit.zoom.us/my/arteml" },
   ];
 
   const workshopSchedule1 = [
