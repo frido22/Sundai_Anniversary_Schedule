@@ -20,7 +20,7 @@ export default function Home() {
   ];
 
   const workshopSchedule1 = [
-    { time: "12:00 PM", title: "AI Powered Portfolio Building with Konstantina Yaneva", location: "Room BlueScreen" },
+    { time: "12:00 PM", title: "AI Powered Portfolio Building with Konstantina Yaneva, Dan Be Kim, and Gabriela Nguyen", location: "Room BlueScreen" },
     { time: "12:00 PM", title: "Foundational LLMs from Scratch with Igor Saldalski", location: "Room Localhost" },
     { time: "12:00 PM", title: "Building even faster with Codapt with Trevor Keith", location: "Room TypeError" },
   ];
@@ -32,7 +32,10 @@ export default function Home() {
   ];
 
   const afternoonSchedule = [
-    { time: "2:00 PM - 4:00 PM", title: "Talks on AI Ethics, Frameworks, and Human Flourishing" },
+    { time: "2:00 PM - 2:30 PM", title: "AI Ethics with Aleks Jaulin" },
+    { time: "2:30 PM - 3:00 PM", title: "Predicting an Unpredictable World: For Those Who Depend on the Outcome with Rickard Gabrielson" },
+    { time: "3:00 PM - 3:45 PM", title: "Common Pitfalls and Best Legal Practices When Building an AI Startup with Foley Hoag" },
+    { time: "3:45 PM - 4:00 PM", title: "Informal AI Resources for People Who Want to Start Companies with Leandra Tejedor" },
     { time: "5:00 PM - 6:00 PM", title: "Startup Pitches" },
   ];
 
