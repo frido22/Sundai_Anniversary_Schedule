@@ -34,11 +34,11 @@ export default function Home() {
 
 
   const afternoonSchedule = [
-    { time: "2:00 PM - 2:30 PM", title: "AI Ethics with Aleks Jakulin" },
-    { time: "2:30 PM - 3:00 PM", title: "Predicting an Unpredictable World: For Those Who Depend on the Outcome with Rickard Gabrielson"},
-    { time: "3:00 PM - 3:45 PM", title: "Common Pitfalls and Best Legal Practices When Building an AI Startup with Foley Hoag"},
-    { time: "3:45 PM - 4:00 PM", title: "Informal AI Resources for People Who Want to Start Companies with Leandra Tejedor" },
-    { time: "5:00 PM - 6:00 PM", title: "Startup Pitches"},
+    { time: "2:00 PM - 2:30 PM", title: "AI Ethics with Aleks Jakulin",  zoomLink: "https://mit.zoom.us/my/arteml"  },
+    { time: "2:30 PM - 3:00 PM", title: "Predicting an Unpredictable World: For Those Who Depend on the Outcome with Rickard Gabrielson",  zoomLink: "https://mit.zoom.us/my/arteml" },
+    { time: "3:00 PM - 3:45 PM", title: "Common Pitfalls and Best Legal Practices When Building an AI Startup with Foley Hoag",  zoomLink: "https://mit.zoom.us/my/arteml" },
+    { time: "3:45 PM - 4:00 PM", title: "Informal AI Resources for People Who Want to Start Companies with Leandra Tejedor",  zoomLink: "https://mit.zoom.us/my/arteml" },
+    { time: "5:00 PM - 6:00 PM", title: "Startup Pitches",  zoomLink: "https://mit.zoom.us/my/arteml" },
   ];
 
   const demoSession1 = [
